@@ -1,0 +1,96 @@
+@themePage: #dfdfdf;
+@themeContent: #ffffff;
+@themeItemContent: #ffffff;
+@TopBtmGapping: 15px;
+@baseMargin: 8px;
+@normalTextFont: 14px;
+@smallFont: 16px;
+@mediumFont: 20px;
+@bigFont: 24px;
+
+.row {
+  // 行向flex布局
+  display: flex;
+  flex-direction: row;
+}
+
+.aboundContainer {
+  // 充满容器
+  width: 100%;
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row-vertical-center {
+  .row();
+  align-items: center;
+}
+
+.row-horizontal-around {
+  .row();
+  justify-content: space-around;
+}
+
+.row-horizontal-between {
+  .row();
+  justify-content: space-between;
+}
+
+.row-center {
+  // 水平垂直居中
+  .row();
+  justify-content: center;
+  align-items: center;
+}
+
+.page-tip {
+  // 页面标识字体
+  font-size: @bigFont;
+}
+
+.childscroll {
+  // 子元素滚动
+  overflow-y: scroll;
+}
+
+.add-bottom{
+  // 下基础间隔
+  padding-bottom: @TopBtmGapping;
+}
+
+.head-select {
+  // 头部选择器
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.page {
+  .aboundContainer();
+}
+
+.main-item {
+  background-color: @themeItemContent;
+  .aboundContainer();
+}
+
+.content-head {
+  height: fit-content;
+  width: 100%;
+  background-color: @themeItemContent;
+}
+
+.content-head-item {
+  .row-horizontal-between();
+  padding-left: 30px;
+  padding-right: 40px;
+  padding-top: @TopBtmGapping;
+}
+
+.content-main {
+  .aboundContainer();
+  background-color: @themeItemContent;
+  margin: @baseMargin;
+}
